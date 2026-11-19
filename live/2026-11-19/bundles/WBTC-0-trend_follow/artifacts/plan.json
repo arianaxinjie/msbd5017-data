@@ -1,0 +1,34 @@
+{
+  "asset": "WBTC",
+  "created_at_block": {
+    "block_hash": "0x063e629f6598b2afab967013916148e528c6aab7a049ea8c60f4421d31597ed6",
+    "block_number": 26447200,
+    "chain_id": 1
+  },
+  "features": [
+    {
+      "id": "f1",
+      "metric": "price_momentum",
+      "window_blocks": 3600
+    }
+  ],
+  "horizon_blocks": 7200,
+  "plan_id": "2f77662f-0edd-4853-9b71-27190dd42b4f",
+  "reasoning_text": "",
+  "rule": {
+    "action": {
+      "direction": "BUY"
+    },
+    "combine": "all",
+    "conditions": [
+      {
+        "lhs": "f1",
+        "op": ">",
+        "rhs": "0.01"
+      }
+    ],
+    "type": "threshold"
+  },
+  "schema_version": "signal-plan/1.1",
+  "transforms": []
+}
