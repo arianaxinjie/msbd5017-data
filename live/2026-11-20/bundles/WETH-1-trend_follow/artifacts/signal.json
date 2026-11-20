@@ -1,0 +1,22 @@
+{
+  "asset": "WETH",
+  "confidence": 0.029335568,
+  "cutoff_block": 26453200,
+  "dataset_id": "live-2026-11-20-weth",
+  "dataset_root": "0xb19bb5900eecba9c9207713787fd6cbdfe5a7f373d14f7499fc9328378263c02",
+  "direction": "SELL",
+  "entry_block": 26454034,
+  "evidence": [
+    {
+      "feature": "f1",
+      "unit": "fraction",
+      "value": -0.039335568
+    }
+  ],
+  "executor_version": "executor/1.0",
+  "horizon_blocks": 7200,
+  "plan_hash": "0xf2246fa7054b05bc190c40e2825973734281a29ec35e49e86170d483019a8764",
+  "schema_version": "signal/1.0",
+  "signal_id": "0x890086935d3a3636808feb7ec573d2fa9eae9687fb738310836eeb6f90f11aef",
+  "signal_timestamp": "2026-11-20T02:52:21Z"
+}
