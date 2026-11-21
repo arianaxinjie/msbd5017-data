@@ -1,0 +1,34 @@
+{
+  "asset": "WETH",
+  "created_at_block": {
+    "block_hash": "0x2245ea9ba770a0d76e4dee129bdd7e8cc3f2a5abe01a4874343b7c943cca3bd3",
+    "block_number": 26461000,
+    "chain_id": 1
+  },
+  "features": [
+    {
+      "id": "f1",
+      "metric": "price_momentum",
+      "window_blocks": 3600
+    }
+  ],
+  "horizon_blocks": 7200,
+  "plan_id": "151afd1a-16e7-4834-b3a3-f14a75b2be26",
+  "reasoning_text": "",
+  "rule": {
+    "action": {
+      "direction": "SELL"
+    },
+    "combine": "all",
+    "conditions": [
+      {
+        "lhs": "f1",
+        "op": "<",
+        "rhs": "-0.01"
+      }
+    ],
+    "type": "threshold"
+  },
+  "schema_version": "signal-plan/1.1",
+  "transforms": []
+}
