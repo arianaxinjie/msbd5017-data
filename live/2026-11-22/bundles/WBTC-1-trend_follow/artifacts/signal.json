@@ -1,0 +1,22 @@
+{
+  "asset": "WBTC",
+  "confidence": 0.006656987,
+  "cutoff_block": 26467900,
+  "dataset_id": "live-2026-11-22-wbtc",
+  "dataset_root": "0xd12c1fdb0dd5441baaf0dc8651349c7630d3cd387fa60284439864c0c4577a2f",
+  "direction": "SELL",
+  "entry_block": 26468711,
+  "evidence": [
+    {
+      "feature": "f1",
+      "unit": "fraction",
+      "value": -0.016656987
+    }
+  ],
+  "executor_version": "executor/1.0",
+  "horizon_blocks": 7200,
+  "plan_hash": "0x7bd315388f59c812be5e2a488bf7691e0fb755b6f4490a5547b73c7e158f31ac",
+  "schema_version": "signal/1.0",
+  "signal_id": "0xa3e92c0433f7a3ee1c7492f3b9fc9d69de3585a9d94153d2df28eb4a52b1136a",
+  "signal_timestamp": "2026-11-22T03:57:50Z"
+}
