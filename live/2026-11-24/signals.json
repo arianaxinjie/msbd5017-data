@@ -1,0 +1,403 @@
+{
+  "day": "2026-11-24",
+  "finalized_block": 26482482,
+  "head_block": 26482551,
+  "cutoff_block": 26482400,
+  "cutoff_timestamp": 1795491839,
+  "entry_block": 26483151,
+  "envelope_dataset_id": "live-2026-11-24",
+  "envelope_root": "0x01f2bc799ee5b4b0116b394673de982f5a8d2f344bc0e3bcbe699b4c64482a4c",
+  "envelopes": 2896,
+  "datasets": {
+    "WETH": {
+      "dataset_id": "live-2026-11-24-weth",
+      "dataset_root": "0x7b3a1296f6ce0f885055f16bf97536343f0743552ecc2fdb657643fd9f2f731a",
+      "files": 2897,
+      "table_hash": "0xf97523ddcb7f274e8bdb4d14652ca2dda9c07f44da1742bc9185bb2eb476e581"
+    },
+    "WBTC": {
+      "dataset_id": "live-2026-11-24-wbtc",
+      "dataset_root": "0x6bdaef66208e7e04b254fd08526f8a54fade5de70c8d64d279d6a74568404e5e",
+      "files": 2897,
+      "table_hash": "0xaedfb2d1237caf3d36225671fb4841d40e0bf5771ab8580019ff0a725d194030"
+    }
+  },
+  "signals": [
+    {
+      "plan_source": "rule",
+      "rule": {
+        "template_id": "trend_follow",
+        "direction": "BUY",
+        "theta": "0.01"
+      },
+      "bundle": "bundles/WETH-0-trend_follow",
+      "plan": {
+        "schema_version": "signal-plan/1.1",
+        "plan_id": "763e4c2d-d914-4945-b612-ec017202393b",
+        "created_at_block": {
+          "chain_id": 1,
+          "block_number": 26482400,
+          "block_hash": "0x32ff6dc35f49b25f0a8cc5c5261029a36656f591f787d23ca67afe455ca2f724"
+        },
+        "asset": "WETH",
+        "horizon_blocks": 7200,
+        "features": [
+          {
+            "id": "f1",
+            "metric": "price_momentum",
+            "window_blocks": 3600
+          }
+        ],
+        "transforms": [],
+        "rule": {
+          "type": "threshold",
+          "conditions": [
+            {
+              "lhs": "f1",
+              "op": ">",
+              "rhs": "0.01"
+            }
+          ],
+          "combine": "all",
+          "action": {
+            "direction": "BUY"
+          }
+        },
+        "reasoning_text": ""
+      },
+      "table_hash": "0xf97523ddcb7f274e8bdb4d14652ca2dda9c07f44da1742bc9185bb2eb476e581",
+      "result": {
+        "status": "OK",
+        "direction": "HOLD",
+        "confidence": 0.0,
+        "evidence": [
+          {
+            "feature": "f1",
+            "value": -0.049516099,
+            "unit": "fraction"
+          }
+        ],
+        "asset": "WETH",
+        "horizon_blocks": 7200,
+        "cutoff_block": 26482400,
+        "plan_hash": "0xedec35d4faa088b440231e41fe2e7113480a624c258d5fe272321f3917b8cd29",
+        "executor_version": "executor/1.0",
+        "detail": ""
+      },
+      "record": {
+        "schema_version": "signal/1.0",
+        "signal_id": "0x5fc2771c9048bbe1e7b97eae062d6cf430526c059213c1a816e450c3920b9ee1",
+        "asset": "WETH",
+        "direction": "HOLD",
+        "horizon_blocks": 7200,
+        "confidence": 0.0,
+        "evidence": [
+          {
+            "feature": "f1",
+            "value": -0.049516099,
+            "unit": "fraction"
+          }
+        ],
+        "dataset_id": "live-2026-11-24-weth",
+        "cutoff_block": 26482400,
+        "entry_block": 26483151,
+        "signal_timestamp": "2026-11-24T04:14:13Z",
+        "plan_hash": "0xedec35d4faa088b440231e41fe2e7113480a624c258d5fe272321f3917b8cd29",
+        "dataset_root": "0x7b3a1296f6ce0f885055f16bf97536343f0743552ecc2fdb657643fd9f2f731a",
+        "executor_version": "executor/1.0"
+      },
+      "commit": {
+        "signal_id": "0x5fc2771c9048bbe1e7b97eae062d6cf430526c059213c1a816e450c3920b9ee1",
+        "plan_hash": "0xedec35d4faa088b440231e41fe2e7113480a624c258d5fe272321f3917b8cd29",
+        "dataset_root": "0x7b3a1296f6ce0f885055f16bf97536343f0743552ecc2fdb657643fd9f2f731a",
+        "asset": "WETH",
+        "direction": "HOLD",
+        "entry_block": 26483151,
+        "horizon_blocks": 7200
+      },
+      "commitment": null
+    },
+    {
+      "plan_source": "rule",
+      "rule": {
+        "template_id": "trend_follow",
+        "direction": "SELL",
+        "theta": "0.01"
+      },
+      "bundle": "bundles/WETH-1-trend_follow",
+      "plan": {
+        "schema_version": "signal-plan/1.1",
+        "plan_id": "0317088a-2053-43be-8b39-fcef5bdf950f",
+        "created_at_block": {
+          "chain_id": 1,
+          "block_number": 26482400,
+          "block_hash": "0x32ff6dc35f49b25f0a8cc5c5261029a36656f591f787d23ca67afe455ca2f724"
+        },
+        "asset": "WETH",
+        "horizon_blocks": 7200,
+        "features": [
+          {
+            "id": "f1",
+            "metric": "price_momentum",
+            "window_blocks": 3600
+          }
+        ],
+        "transforms": [],
+        "rule": {
+          "type": "threshold",
+          "conditions": [
+            {
+              "lhs": "f1",
+              "op": "<",
+              "rhs": "-0.01"
+            }
+          ],
+          "combine": "all",
+          "action": {
+            "direction": "SELL"
+          }
+        },
+        "reasoning_text": ""
+      },
+      "table_hash": "0xf97523ddcb7f274e8bdb4d14652ca2dda9c07f44da1742bc9185bb2eb476e581",
+      "result": {
+        "status": "OK",
+        "direction": "SELL",
+        "confidence": 0.039516099,
+        "evidence": [
+          {
+            "feature": "f1",
+            "value": -0.049516099,
+            "unit": "fraction"
+          }
+        ],
+        "asset": "WETH",
+        "horizon_blocks": 7200,
+        "cutoff_block": 26482400,
+        "plan_hash": "0x320732a6c0b3d47e5bda1e2a57b0090ab5b01ce6b0249c092443bc25288d28f2",
+        "executor_version": "executor/1.0",
+        "detail": ""
+      },
+      "record": {
+        "schema_version": "signal/1.0",
+        "signal_id": "0xa7f40c7d8ab2e8c1e0a83c2048de9036bac9681e108bf0d924aa48df77a1afd9",
+        "asset": "WETH",
+        "direction": "SELL",
+        "horizon_blocks": 7200,
+        "confidence": 0.039516099,
+        "evidence": [
+          {
+            "feature": "f1",
+            "value": -0.049516099,
+            "unit": "fraction"
+          }
+        ],
+        "dataset_id": "live-2026-11-24-weth",
+        "cutoff_block": 26482400,
+        "entry_block": 26483151,
+        "signal_timestamp": "2026-11-24T04:14:13Z",
+        "plan_hash": "0x320732a6c0b3d47e5bda1e2a57b0090ab5b01ce6b0249c092443bc25288d28f2",
+        "dataset_root": "0x7b3a1296f6ce0f885055f16bf97536343f0743552ecc2fdb657643fd9f2f731a",
+        "executor_version": "executor/1.0"
+      },
+      "commit": {
+        "signal_id": "0xa7f40c7d8ab2e8c1e0a83c2048de9036bac9681e108bf0d924aa48df77a1afd9",
+        "plan_hash": "0x320732a6c0b3d47e5bda1e2a57b0090ab5b01ce6b0249c092443bc25288d28f2",
+        "dataset_root": "0x7b3a1296f6ce0f885055f16bf97536343f0743552ecc2fdb657643fd9f2f731a",
+        "asset": "WETH",
+        "direction": "SELL",
+        "entry_block": 26483151,
+        "horizon_blocks": 7200
+      },
+      "commitment": null
+    },
+    {
+      "plan_source": "rule",
+      "rule": {
+        "template_id": "trend_follow",
+        "direction": "BUY",
+        "theta": "0.01"
+      },
+      "bundle": "bundles/WBTC-0-trend_follow",
+      "plan": {
+        "schema_version": "signal-plan/1.1",
+        "plan_id": "79a054cd-46b2-4541-8ade-0e3147bc7a7a",
+        "created_at_block": {
+          "chain_id": 1,
+          "block_number": 26482400,
+          "block_hash": "0x32ff6dc35f49b25f0a8cc5c5261029a36656f591f787d23ca67afe455ca2f724"
+        },
+        "asset": "WBTC",
+        "horizon_blocks": 7200,
+        "features": [
+          {
+            "id": "f1",
+            "metric": "price_momentum",
+            "window_blocks": 3600
+          }
+        ],
+        "transforms": [],
+        "rule": {
+          "type": "threshold",
+          "conditions": [
+            {
+              "lhs": "f1",
+              "op": ">",
+              "rhs": "0.01"
+            }
+          ],
+          "combine": "all",
+          "action": {
+            "direction": "BUY"
+          }
+        },
+        "reasoning_text": ""
+      },
+      "table_hash": "0xaedfb2d1237caf3d36225671fb4841d40e0bf5771ab8580019ff0a725d194030",
+      "result": {
+        "status": "OK",
+        "direction": "HOLD",
+        "confidence": 0.0,
+        "evidence": [
+          {
+            "feature": "f1",
+            "value": -0.047427479,
+            "unit": "fraction"
+          }
+        ],
+        "asset": "WBTC",
+        "horizon_blocks": 7200,
+        "cutoff_block": 26482400,
+        "plan_hash": "0x9179ac2958dc4c46b5bf26e593bf55dce5608d5eabb8b359131c22c12f375caa",
+        "executor_version": "executor/1.0",
+        "detail": ""
+      },
+      "record": {
+        "schema_version": "signal/1.0",
+        "signal_id": "0x4ae85f34e5dc04646c492a576529ff88467dfa99eacb366f503ca1674e6839a5",
+        "asset": "WBTC",
+        "direction": "HOLD",
+        "horizon_blocks": 7200,
+        "confidence": 0.0,
+        "evidence": [
+          {
+            "feature": "f1",
+            "value": -0.047427479,
+            "unit": "fraction"
+          }
+        ],
+        "dataset_id": "live-2026-11-24-wbtc",
+        "cutoff_block": 26482400,
+        "entry_block": 26483151,
+        "signal_timestamp": "2026-11-24T04:14:13Z",
+        "plan_hash": "0x9179ac2958dc4c46b5bf26e593bf55dce5608d5eabb8b359131c22c12f375caa",
+        "dataset_root": "0x6bdaef66208e7e04b254fd08526f8a54fade5de70c8d64d279d6a74568404e5e",
+        "executor_version": "executor/1.0"
+      },
+      "commit": {
+        "signal_id": "0x4ae85f34e5dc04646c492a576529ff88467dfa99eacb366f503ca1674e6839a5",
+        "plan_hash": "0x9179ac2958dc4c46b5bf26e593bf55dce5608d5eabb8b359131c22c12f375caa",
+        "dataset_root": "0x6bdaef66208e7e04b254fd08526f8a54fade5de70c8d64d279d6a74568404e5e",
+        "asset": "WBTC",
+        "direction": "HOLD",
+        "entry_block": 26483151,
+        "horizon_blocks": 7200
+      },
+      "commitment": null
+    },
+    {
+      "plan_source": "rule",
+      "rule": {
+        "template_id": "trend_follow",
+        "direction": "SELL",
+        "theta": "0.01"
+      },
+      "bundle": "bundles/WBTC-1-trend_follow",
+      "plan": {
+        "schema_version": "signal-plan/1.1",
+        "plan_id": "b7c182eb-bc99-455a-b06f-6998cb5cd56d",
+        "created_at_block": {
+          "chain_id": 1,
+          "block_number": 26482400,
+          "block_hash": "0x32ff6dc35f49b25f0a8cc5c5261029a36656f591f787d23ca67afe455ca2f724"
+        },
+        "asset": "WBTC",
+        "horizon_blocks": 7200,
+        "features": [
+          {
+            "id": "f1",
+            "metric": "price_momentum",
+            "window_blocks": 3600
+          }
+        ],
+        "transforms": [],
+        "rule": {
+          "type": "threshold",
+          "conditions": [
+            {
+              "lhs": "f1",
+              "op": "<",
+              "rhs": "-0.01"
+            }
+          ],
+          "combine": "all",
+          "action": {
+            "direction": "SELL"
+          }
+        },
+        "reasoning_text": ""
+      },
+      "table_hash": "0xaedfb2d1237caf3d36225671fb4841d40e0bf5771ab8580019ff0a725d194030",
+      "result": {
+        "status": "OK",
+        "direction": "SELL",
+        "confidence": 0.037427479,
+        "evidence": [
+          {
+            "feature": "f1",
+            "value": -0.047427479,
+            "unit": "fraction"
+          }
+        ],
+        "asset": "WBTC",
+        "horizon_blocks": 7200,
+        "cutoff_block": 26482400,
+        "plan_hash": "0x0b6589ace4fb68ecfea655a6f568947980b58b2df47ebb8b59af01737cf7cadf",
+        "executor_version": "executor/1.0",
+        "detail": ""
+      },
+      "record": {
+        "schema_version": "signal/1.0",
+        "signal_id": "0x0fb83dce2d878d525199e41911f14e4cf32ac5ba9ee231d775d6bd86d03e99e5",
+        "asset": "WBTC",
+        "direction": "SELL",
+        "horizon_blocks": 7200,
+        "confidence": 0.037427479,
+        "evidence": [
+          {
+            "feature": "f1",
+            "value": -0.047427479,
+            "unit": "fraction"
+          }
+        ],
+        "dataset_id": "live-2026-11-24-wbtc",
+        "cutoff_block": 26482400,
+        "entry_block": 26483151,
+        "signal_timestamp": "2026-11-24T04:14:13Z",
+        "plan_hash": "0x0b6589ace4fb68ecfea655a6f568947980b58b2df47ebb8b59af01737cf7cadf",
+        "dataset_root": "0x6bdaef66208e7e04b254fd08526f8a54fade5de70c8d64d279d6a74568404e5e",
+        "executor_version": "executor/1.0"
+      },
+      "commit": {
+        "signal_id": "0x0fb83dce2d878d525199e41911f14e4cf32ac5ba9ee231d775d6bd86d03e99e5",
+        "plan_hash": "0x0b6589ace4fb68ecfea655a6f568947980b58b2df47ebb8b59af01737cf7cadf",
+        "dataset_root": "0x6bdaef66208e7e04b254fd08526f8a54fade5de70c8d64d279d6a74568404e5e",
+        "asset": "WBTC",
+        "direction": "SELL",
+        "entry_block": 26483151,
+        "horizon_blocks": 7200
+      },
+      "commitment": null
+    }
+  ]
+}
