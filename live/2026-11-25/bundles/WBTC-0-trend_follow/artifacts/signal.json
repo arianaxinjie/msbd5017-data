@@ -1,0 +1,22 @@
+{
+  "asset": "WBTC",
+  "confidence": 0.0,
+  "cutoff_block": 26489400,
+  "dataset_id": "live-2026-11-25-wbtc",
+  "dataset_root": "0x054d73d7f4db4fed2877c3460f7405fd020ab57ee4ce143fdb81fcc2a16d7f0d",
+  "direction": "HOLD",
+  "entry_block": 26490177,
+  "evidence": [
+    {
+      "feature": "f1",
+      "unit": "fraction",
+      "value": -0.019213523
+    }
+  ],
+  "executor_version": "executor/1.0",
+  "horizon_blocks": 7200,
+  "plan_hash": "0x09125470fd6728f8aef26755b8c20d5f9f4b6802c100c350bb74c6e3be4d05b0",
+  "schema_version": "signal/1.0",
+  "signal_id": "0x6fbee8b499984b8dbd42fbfce2c9f337a6fb0aa1a450e841012a6f1e0e0c5062",
+  "signal_timestamp": "2026-11-25T03:42:25Z"
+}
